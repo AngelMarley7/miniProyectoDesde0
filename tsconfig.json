@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "target": "ES6", // Versión de JavaScript a la que se convertirá el código
+      "module": "CommonJS", // Sistema de módulos compatible con Node.js
+      "strict": true, // Activa todas las comprobaciones estrictas de TypeScript
+      "outDir": "./dist", // Carpeta donde se guardarán los archivos compilados
+      "rootDir": "./src", // Carpeta donde están los archivos originales (TypeScript)
+      "esModuleInterop": true // Permite importar módulos de ES6 en CommonJS sin problemas
+    },
+    "include": ["src/**/*"],
+    "exclude": ["dist"]
+  }
+  

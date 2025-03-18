@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "boton-products": "/products",
         "boton-new-product": "/new-product",
         "boton-graphs": "/graphs",
-        "boton-settings": "/paxina-app" // Redirige a la página de configuración
+        "boton-settings": "/settings" // Redirige a la página de configuración
     };
 
     // Buscar y añadir eventos de clic a los botones

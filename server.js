@@ -20,9 +20,9 @@ app.get("/inicio", (req, res) => {
     res.sendFile(path.join(__dirname, "dist/views/inicio.html"));
 });
 
-// **ENDPOINT PARA paxina-app**
-app.get("/paxina-app", (req, res) => {
-    res.sendFile(path.join(__dirname, "dist/views/paxina-app.html"));
+// **ENDPOINT PARA settings**
+app.get("/settings", (req, res) => {
+    res.sendFile(path.join(__dirname, "dist/views/settings.html"));
 });
 
 

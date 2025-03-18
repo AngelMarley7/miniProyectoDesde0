@@ -8,12 +8,12 @@ module.exports = {
         main: "./src/index.ts", // Archivo principal de entrada (TypeScript)
         logueo: "./src/comunicacion/logueo.ts", // Asegura que logueo.ts se compile
         inicio: "./src/comunicacion/inicio.ts", // Asegurar que inicio.ts se compile
-        settings: "./src/comunicacion/paxina.settings.ts" // Asegurar que se compile
+        settings: "./src/comunicacion/settings.ts" // Asegurar que se compile
 
     },
     
     output: {
-        filename: "javascript/[name].js", // [name] crea un archivo con el nombre de cada entry
+        filename: "[name].js", // [name] crea un archivo con el nombre de cada entry
         path: path.resolve(__dirname, "dist"), // Carpeta donde se guardará el resultado
     },
     

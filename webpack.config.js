@@ -4,10 +4,16 @@ const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
     mode: "development", // Modo desarrollo (puede cambiarse a 'production' para optimización)
     
-    entry: "./src/index.ts", // Archivo principal de entrada (TypeScript)
+    entry: {
+        main: "./src/index.ts", // Archivo principal de entrada (TypeScript)
+        logueo: "./src/comunicacion/logueo.ts", // Asegura que logueo.ts se compile
+        inicio: "./src/comunicacion/inicio.ts", // Asegurar que inicio.ts se compile
+        settings: "./src/comunicacion/paxina.settings.ts" // Asegurar que se compile
+
+    },
     
     output: {
-        filename: "bundle.js", // Archivo de salida con todo el código compilado
+        filename: "javascript/[name].js", // [name] crea un archivo con el nombre de cada entry
         path: path.resolve(__dirname, "dist"), // Carpeta donde se guardará el resultado
     },
     
@@ -31,7 +37,9 @@ module.exports = {
     plugins: [
         new CopyPlugin({
             patterns: [
-                { from: "./src/views", to: "views" } // Copia los archivos HTML a 'dist/views/'
+                { from: "./src/views", to: "views" }, // Copia los archivos HTML a 'dist/views/'
+                { from: "./src/css", to: "css" }, // Copia los archivos CSS a 'dist/css/'
+                { from: "./src/imaxenes", to: "imaxenes" } // Copia las imágenes a 'dist/imaxenes/'
             ],
         }),
     ],

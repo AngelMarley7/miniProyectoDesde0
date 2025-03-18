@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  @media (width <= 768px) {
+    body {
+      background-color: orange;
+    }
+  }
+  
+  @media (width > 768px) {
+    body {
+      height: 100vh;
+      background-color: #f5f5f5;
+      display: flex;
+    }
+    aside {
+      background-color: #4b8ce7;
+      width: 5%;
+      height: 100vh;
+    }
+  
+    .container-aside {
+      display: flex;
+      flex-direction: column; /* Para apilar las imágenes */
+      align-items: center;
+      gap: 90px; /* Separación entre las imágenes */
+      padding: 5px;
+      background-color: transparent;
+      height: 100vh; /* Abarca toda la altura de la ventana */
+      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1); /* Sombra al aside */
+    }
+    .aside-button {
+      width: 50px; /* Tamaño inicial */
+      height: 50px;
+      cursor: pointer; /* Cambia el cursor al pasar por encima */
+      transition: all 0.3s ease; /* Transición suave para hover y active */
+      background-color: transparent;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    main {
+      width: 95%;
+      background-color: #f4f0f0;
+    }
+    header {
+      border: 1px solid transparent;
+      height: 8%;
+      background-color: #ffffff;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: space-between;
+      .notificaciones-img {
+        order: 2;
+        margin-right: 20px;
+      }
+  
+      .input-container {
+        display: flex;
+        order: 1;
+        width: 30%;
+        border: solid 2px #7b7d807e;
+        border-radius: 5px;
+        gap: 4px;
+        margin-left: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+  
+        .input-img {
+          margin-left: 10px;
+          margin-top: 10px;
+        }
+  
+        .input-text {
+          width: 40%;
+          margin-top: 6px;
+          padding: 1px;
+          font-size: larger;
+          border: transparent;
+        }
+      }
+    }
+    .nombres-paginas {
+      color: #405169;
+      font-family: "Mulish", serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+      margin-left: 65px;
+      margin-top: 20px;
+    }
+    .section-paginas {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 92%;
+    }
+    .main-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+  
+      article {
+        padding: 50px;
+        background-color: #f4f0f0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 100%;
+        max-width: 1200px;
+        margin-top: 20px;
+        margin-bottom: -50px;
+  
+        .div-trabajo-imagen-1 {
+          padding: 3px;
+          width: 300px;
+          border: 5px solid orange;
+          height: 300px;
+          img {
+            width: 50px; /* Tamaño uniforme para todas las imágenes */
+            height: 50px; /* Altura fija para evitar desalineaciones */
+            object-fit: contain; /* Ajustar imagen sin distorsionarla */
+            margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+          }
+        }
+      }
+      .div-imagenes {
+        transition: transform 0.2s ease-in-out;
+        cursor: pointer;
+        height: 180px;
+        width: 180px;
+        background-color: white; /* Fondo blanco */
+        border-radius: 5px; /* Bordes redondeados */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra más visible */
+        padding: 20px; /* Espaciado interno */
+        text-align: center; /* Centrar contenido */
+        margin: 10px; /* Espaciado externo */
+        display: flex; /* Flex para centrar contenido */
+        flex-direction: column; /* Alinear contenido en columna */
+        align-items: center; /* Centrar elementos hijos horizontalmente */
+        justify-content: center; /* Centrar elementos hijos verticalmente */
+      }
+      .div-imagenes:hover{
+        transform: scale(1.1);
+        box-shadow: #405169;
+      }
+      .div-imagenes img{
+        pointer-events: none;
+      }
+      
+    }
+  }
+  
